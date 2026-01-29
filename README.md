@@ -16,37 +16,90 @@ TablePickCV is a community-driven, educational open-source project that builds a
 - Learn **collaborative development** with GitHub (issues, PRs, reviews)
 - Produce something that actually works in **simulation and/or real hardware**
 
+## 📂 Project Structure
+
+```
+TablePickCV/
+├── src/                    # Source code
+│   ├── input/             # Camera, video, image sources
+│   ├── detection/         # Object detection (YOLO, etc.)
+│   ├── segmentation/      # Instance segmentation (SAM, etc.)
+│   ├── depth/             # RGB-D processing
+│   ├── pose_estimation/   # Pick pose calculation
+│   ├── export/            # JSON export, visualization
+│   ├── robot/             # ROS2/simulation interfaces
+│   ├── pipeline/          # Main orchestrator
+│   └── utils/             # Shared utilities
+├── tests/                  # Unit tests
+├── configs/               # YAML configuration files
+├── data/                  # Sample data (gitignored)
+├── docs/                  # Documentation
+│   ├── learnings/         # Contributor learning notes
+│   └── setup/             # Installation guides
+└── scripts/               # Helper scripts
+```
 
 ## 🧱 Planned V1 Features
 
 - Input from camera / video / image folder
-- Object detection
-- Object segmentation
+- Object detection (YOLO)
+- Object segmentation (SAM)
 - Depth integration (RGB-D)
 - Pick pose estimation (X, Y, Z + yaw)
 - JSON export + visualization
 - Simple robot execution:
   - ROS2 + MoveIt OR
-  - Simulation (e.g. PyBullet)
+  - Simulation (PyBullet)
+
+## 🚀 Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_ORG/TablePickCV.git
+cd TablePickCV
+
+# Create virtual environment
+python -m venv venv
+# Windows: .\venv\Scripts\activate
+# Linux/Mac: source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run tests
+pytest
+```
 
 ## 📦 Project Status
 
 🚧 **Early development** — project skeleton and first modules are being set up.
 
-## 🤝 How to participate
+## 🤝 How to Contribute
 
-- Check the issues tab
-- Pick a task
-- Open a PR
-- Add a short learning note in `docs/learnings/`
+We welcome contributors of all experience levels! Here's how to get started:
 
-See: `docs/contributing.md`
+1. **Check the [Issues](../../issues) tab** — we have beginner, intermediate, and advanced tasks
+2. **Comment on an issue** to let others know you're working on it
+3. **Fork the repo** and create a branch for your work
+4. **Open a PR** when ready
+5. **Add a learning note** in `docs/learnings/` to share what you learned
+
+📖 **Full guide:** [docs/contributing.md](docs/contributing.md)
+
+📐 **Architecture:** [docs/architecture.md](docs/architecture.md)
+
+🛠️ **Installation:** [docs/setup/installation.md](docs/setup/installation.md)
+
+## 👥 Team
+
+This project is built by ~15 contributors with different backgrounds and experience levels, from the **AI Vision Academy** community.
 
 ## 🪪 License
 
-MIT License — see `LICENSE`
+MIT License — see [LICENSE](LICENSE)
 
 ---
 
 Built by the members of the **AI Vision Academy** community:  
 https://www.skool.com/ai-vision-academy
+

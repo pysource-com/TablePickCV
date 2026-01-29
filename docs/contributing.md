@@ -1,0 +1,138 @@
+# Contributing to TablePickCV
+
+Welcome! We're excited to have you contribute to this community-driven project. This guide will help you get started.
+
+## 🚀 Getting Started
+
+### 1. Fork and Clone
+
+```bash
+# Fork the repo on GitHub, then clone your fork
+git clone https://github.com/YOUR_USERNAME/TablePickCV.git
+cd TablePickCV
+```
+
+### 2. Set Up Your Environment
+
+```bash
+# Create a virtual environment
+python -m venv venv
+
+# Activate it
+# Windows:
+venv\Scripts\activate
+# Linux/Mac:
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### 3. Create a Branch
+
+```bash
+git checkout -b feature/your-feature-name
+# or
+git checkout -b fix/your-bug-fix
+```
+
+## 📝 Workflow
+
+1. **Pick an issue** from the Issues tab
+2. **Comment** on the issue to let others know you're working on it
+3. **Create a branch** for your work
+4. **Make your changes** with clear, small commits
+5. **Test your changes** - add tests if applicable
+6. **Open a Pull Request** with a clear description
+
+## 📂 Project Structure
+
+```
+TablePickCV/
+├── src/                    # Source code
+│   ├── input/             # Camera, video, image sources
+│   ├── detection/         # Object detection (YOLO, etc.)
+│   ├── segmentation/      # Instance segmentation (SAM, etc.)
+│   ├── depth/             # RGB-D processing
+│   ├── pose_estimation/   # Pick pose calculation
+│   ├── export/            # JSON export, visualization
+│   ├── robot/             # ROS2/simulation interfaces
+│   ├── pipeline/          # Main orchestrator
+│   └── utils/             # Shared utilities
+├── tests/                  # Unit tests
+├── configs/               # Configuration files
+├── data/                  # Sample data (gitignored)
+├── docs/                  # Documentation
+└── scripts/               # Helper scripts
+```
+
+## 🎯 Coding Guidelines
+
+### Python Style
+- Follow **PEP 8** style guide
+- Use **type hints** where possible
+- Write **docstrings** for functions and classes
+- Keep functions focused and small
+
+### Example Function
+
+```python
+def detect_objects(image: np.ndarray, confidence: float = 0.5) -> list[Detection]:
+    """
+    Detect objects in an image using the configured model.
+    
+    Args:
+        image: Input image as numpy array (H, W, C) in BGR format
+        confidence: Minimum confidence threshold (0.0 to 1.0)
+    
+    Returns:
+        List of Detection objects with bounding boxes and labels
+    """
+    # Implementation here
+    pass
+```
+
+### Commits
+- Write clear commit messages
+- Use present tense: "Add feature" not "Added feature"
+- Reference issues: "Fix #12: Handle empty image input"
+
+## 🧪 Testing
+
+```bash
+# Run all tests
+pytest
+
+# Run tests for a specific module
+pytest tests/test_input.py
+
+# Run with coverage
+pytest --cov=src
+```
+
+## 📖 Learning Notes
+
+After completing your contribution, consider adding a short learning note in `docs/learnings/`:
+
+```markdown
+# Your Name - What I Learned
+
+## Date: YYYY-MM-DD
+
+## Task
+Brief description of what you worked on.
+
+## Key Learnings
+- Point 1
+- Point 2
+
+## Challenges & Solutions
+What was tricky and how you solved it.
+```
+
+## ❓ Questions?
+
+- Open a Discussion on GitHub
+- Ask in the AI Vision Academy community
+
+Thank you for contributing! 🎉

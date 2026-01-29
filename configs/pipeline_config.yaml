@@ -1,0 +1,43 @@
+# Pipeline Configuration
+# Main configuration file for TablePickCV
+
+# Input settings
+input:
+  source_type: "image_folder"  # Options: image_folder, video, camera
+  path: "data/sample_images"
+  camera_id: 0  # For webcam input
+
+# Detection settings
+detection:
+  model: "yolov8n.pt"  # YOLO model to use
+  confidence_threshold: 0.5
+  classes: []  # Empty = all classes, or specify: [0, 39, 41] for person, bottle, cup
+
+# Segmentation settings
+segmentation:
+  enabled: true
+  model: "sam_vit_b"  # Options: sam_vit_b, sam_vit_l, sam_vit_h
+
+# Depth settings
+depth:
+  enabled: false
+  source: "rgbd_camera"  # Options: rgbd_camera, stereo, monocular_estimation
+  depth_scale: 0.001  # Convert depth values to meters
+
+# Pose estimation settings
+pose_estimation:
+  method: "centroid"  # Options: centroid, pca, grasp_network
+  offset_z: 0.05  # Approach height above object (meters)
+
+# Export settings
+export:
+  save_json: true
+  output_dir: "outputs"
+  visualize: true
+  save_images: true
+
+# Robot settings
+robot:
+  enabled: false
+  interface: "simulation"  # Options: ros2, pybullet, simulation
+  robot_type: "generic_arm"
