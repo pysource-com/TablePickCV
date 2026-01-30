@@ -4,12 +4,41 @@ Welcome! We're excited to have you contribute to this community-driven project. 
 
 ## 🚀 Getting Started
 
-### 1. Fork and Clone
+### Step 1: Fork the Repository
+
+Before you can contribute, you need to create your own copy of the repository:
+
+1. Visit the repository at: **https://github.com/pysource-com/TablePickCV**
+2. Click the **Fork** button in the top-right corner of the page
+3. Select your GitHub account as the destination for the fork
+4. Wait for GitHub to create your personal copy of the repository
+
+This creates a complete copy of the project under your GitHub account where you can make changes without affecting the original repository.
+
+### Step 2: Clone Your Fork
+
+Once you've forked the repository, clone it to your local machine:
 
 ```bash
-# Fork the repo on GitHub, then clone your fork
-git clone https://github.com/YOUR_USERNAME/TablePickCV.git
+# Replace YOUR-USERNAME with your actual GitHub username
+git clone https://github.com/YOUR-USERNAME/TablePickCV.git
 cd TablePickCV
+```
+
+Alternatively, if you have SSH configured with GitHub:
+
+```bash
+git clone git@github.com:YOUR-USERNAME/TablePickCV.git
+cd TablePickCV
+```
+
+### Step 3: Set Up Upstream Remote
+
+Add the original repository as an upstream remote to keep your fork synchronized:
+
+```bash
+git remote add upstream https://github.com/pysource-com/TablePickCV.git
+git remote -v  # Verify the remotes
 ```
 
 ### 2. Set Up Your Environment
