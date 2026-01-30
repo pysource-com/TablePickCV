@@ -42,10 +42,10 @@ TablePickCV/
 ## 🧱 Planned V1 Features
 
 - Input from camera / video / image folder
-- Object detection (YOLO)
-- Object segmentation (SAM)
+- Object detection
+- Object segmentation
 - Depth integration (RGB-D)
-- Pick pose estimation (X, Y, Z + yaw)
+- Pick pose estimation (X, Y, Z)
 - JSON export + visualization
 - Simple robot execution:
   - ROS2 + MoveIt OR

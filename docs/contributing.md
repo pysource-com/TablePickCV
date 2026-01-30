@@ -57,7 +57,12 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Step 5: Create a Branch
+### Step 5: Pick an Issue & Create a Branch
+
+1. **Browse the Issues tab** at https://github.com/pysource-com/TablePickCV/issues
+2. **Find an issue** that interests you (look for "good first issue" labels if you're new)
+3. **Comment on the issue** to let maintainers and others know you're working on it
+4. **Create a branch** for your work:
 
 ```bash
 git checkout -b feature/your-feature-name
@@ -65,14 +70,12 @@ git checkout -b feature/your-feature-name
 git checkout -b fix/your-bug-fix
 ```
 
-## 📝 Workflow
+### Step 6: Make Your Changes
 
-1. **Pick an issue** from the Issues tab
-2. **Comment** on the issue to let others know you're working on it
-3. **Create a branch** for your work
-4. **Make your changes** with clear, small commits
-5. **Test your changes** - add tests if applicable
-6. **Open a Pull Request** with a clear description
+- Write clear, focused code
+- Make small, logical commits as you work
+- Test your changes thoroughly
+- Add tests if you're introducing new features
 
 ## 🔄 Submitting a Pull Request
 
