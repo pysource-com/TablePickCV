@@ -58,16 +58,6 @@ TablePickCV/
 git clone https://github.com/YOUR_ORG/TablePickCV.git
 cd TablePickCV
 
-# Create virtual environment
-python -m venv venv
-# Windows: .\venv\Scripts\activate
-# Linux/Mac: source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run tests
-pytest
 ```
 
 ## 📦 Project Status
@@ -90,9 +80,6 @@ We welcome contributors of all experience levels! Here's how to get started:
 
 🛠️ **Installation:** [docs/setup/installation.md](docs/setup/installation.md)
 
-## 👥 Team
-
-This project is built by ~15 contributors with different backgrounds and experience levels, from the **AI Vision Academy** community.
 
 ## 🪪 License
 
