@@ -96,11 +96,6 @@ TablePickCV/
 ```
 
 ## 🎯 Coding Guidelines
-
-### Python Style
-- Follow **PEP 8** style guide
-- Use **type hints** where possible
-- Write **docstrings** for functions and classes
 - Keep functions focused and small
 
 ### Example Function
