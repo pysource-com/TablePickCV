@@ -41,7 +41,7 @@ git remote add upstream https://github.com/pysource-com/TablePickCV.git
 git remote -v  # Verify the remotes
 ```
 
-### 2. Set Up Your Environment
+### Step 4: Set Up Your Environment
 
 ```bash
 # Create a virtual environment
@@ -57,7 +57,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. Create a Branch
+### Step 5: Create a Branch
 
 ```bash
 git checkout -b feature/your-feature-name
@@ -109,11 +109,11 @@ TablePickCV/
 def detect_objects(image: np.ndarray, confidence: float = 0.5) -> list[Detection]:
     """
     Detect objects in an image using the configured model.
-    
+
     Args:
         image: Input image as numpy array (H, W, C) in BGR format
         confidence: Minimum confidence threshold (0.0 to 1.0)
-    
+
     Returns:
         List of Detection objects with bounding boxes and labels
     """
