@@ -43,6 +43,8 @@ git remote -v  # Verify the remotes
 
 ### Step 4: Set Up Your Environment
 
+**Option 1: Using Command Line**
+
 ```bash
 # Create a virtual environment
 python -m venv venv
@@ -56,6 +58,18 @@ source venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 ```
+
+**Option 2: Using PyCharm**
+
+1. Open the project folder in PyCharm
+2. PyCharm will detect the `requirements.txt` file and prompt you to install dependencies
+3. Click **"Install requirements"** in the notification banner
+4. Alternatively, manually set up:
+   - Go to **File → Settings → Project → Python Interpreter**
+   - Click the ⚙️ gear icon → **Add Interpreter → Add Local Interpreter**
+   - Select **Virtual Environment → New**
+   - Click **OK** and PyCharm will create the venv
+   - Right-click `requirements.txt` → **Install All Packages**
 
 ### Step 5: Pick an Issue & Create a Branch
 
