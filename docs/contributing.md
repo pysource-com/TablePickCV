@@ -4,15 +4,44 @@ Welcome! We're excited to have you contribute to this community-driven project. 
 
 ## 🚀 Getting Started
 
-### 1. Fork and Clone
+### Step 1: Fork the Repository
+
+Before you can contribute, you need to create your own copy of the repository:
+
+1. Visit the repository at: **https://github.com/pysource-com/TablePickCV**
+2. Click the **Fork** button in the top-right corner of the page
+3. Select your GitHub account as the destination for the fork
+4. Wait for GitHub to create your personal copy of the repository
+
+This creates a complete copy of the project under your GitHub account where you can make changes without affecting the original repository.
+
+### Step 2: Clone Your Fork
+
+Once you've forked the repository, clone it to your local machine:
 
 ```bash
-# Fork the repo on GitHub, then clone your fork
-git clone https://github.com/YOUR_USERNAME/TablePickCV.git
+# Replace YOUR-USERNAME with your actual GitHub username
+git clone https://github.com/YOUR-USERNAME/TablePickCV.git
 cd TablePickCV
 ```
 
-### 2. Set Up Your Environment
+Alternatively, if you have SSH configured with GitHub:
+
+```bash
+git clone git@github.com:YOUR-USERNAME/TablePickCV.git
+cd TablePickCV
+```
+
+### Step 3: Set Up Upstream Remote
+
+Add the original repository as an upstream remote to keep your fork synchronized:
+
+```bash
+git remote add upstream https://github.com/pysource-com/TablePickCV.git
+git remote -v  # Verify the remotes
+```
+
+### Step 4: Set Up Your Environment
 
 ```bash
 # Create a virtual environment
@@ -28,7 +57,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. Create a Branch
+### Step 5: Create a Branch
 
 ```bash
 git checkout -b feature/your-feature-name
@@ -67,11 +96,6 @@ TablePickCV/
 ```
 
 ## 🎯 Coding Guidelines
-
-### Python Style
-- Follow **PEP 8** style guide
-- Use **type hints** where possible
-- Write **docstrings** for functions and classes
 - Keep functions focused and small
 
 ### Example Function
@@ -80,11 +104,11 @@ TablePickCV/
 def detect_objects(image: np.ndarray, confidence: float = 0.5) -> list[Detection]:
     """
     Detect objects in an image using the configured model.
-    
+
     Args:
         image: Input image as numpy array (H, W, C) in BGR format
         confidence: Minimum confidence threshold (0.0 to 1.0)
-    
+
     Returns:
         List of Detection objects with bounding boxes and labels
     """
