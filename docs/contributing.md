@@ -74,6 +74,78 @@ git checkout -b fix/your-bug-fix
 5. **Test your changes** - add tests if applicable
 6. **Open a Pull Request** with a clear description
 
+## 🔄 Submitting a Pull Request
+
+### Step 1: Commit Your Changes
+
+```bash
+# Stage your changes
+git add .
+
+# Commit with a descriptive message
+git commit -m "Add: table detection feature for YOLO model"
+```
+
+### Step 2: Keep Your Branch Updated
+
+Before submitting, sync with the latest changes from the main repository:
+
+```bash
+# Fetch the latest changes from upstream
+git fetch upstream
+
+# Merge upstream changes into your branch
+git merge upstream/main
+
+# Resolve any conflicts if they occur
+```
+
+### Step 3: Push to Your Fork
+
+```bash
+git push origin feature/your-feature-name
+```
+
+### Step 4: Create the Pull Request
+
+1. Go to your fork on GitHub: `https://github.com/YOUR-USERNAME/TablePickCV`
+2. You'll see a banner saying "Compare & pull request" - click it
+3. Alternatively, go to the **Pull Requests** tab and click **New Pull Request**
+4. Ensure the base repository is `pysource-com/TablePickCV` and base branch is `main`
+5. Ensure the head repository is your fork and compare branch is your feature branch
+
+### Step 5: Fill Out the PR Description
+
+Provide a clear description of your changes:
+
+```markdown
+## Description
+Brief summary of what this PR does.
+
+## Related Issue
+Closes #123
+
+## Changes Made
+- Added table detection module
+- Updated configuration schema
+- Added unit tests for detection
+
+## Testing
+- [ ] Tested with sample images
+- [ ] All tests pass locally
+- [ ] Added new tests for new features
+
+## Screenshots (if applicable)
+Add screenshots or videos demonstrating the changes.
+```
+
+### Step 6: Submit and Respond to Feedback
+
+1. Click **Create Pull Request**
+2. Wait for maintainers to review your PR
+3. Respond to any feedback or requested changes
+4. Push additional commits to your branch if changes are needed (they'll automatically appear in the PR)
+
 ## 📂 Project Structure
 
 ```
